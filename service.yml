@@ -1,12 +1,13 @@
 kind : Service
 apiVersion: v1
 metadata:
-  name: web-service
+ name: web-service
 spec:
-  ports:
-    - protocol: TCP
-	  port: 80
-      targetPort: 80
-  selector:
-   app: web
-  type: LoadBalancer
+ selector:
+  app: web
+ ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+ type: LoadBalancer
+  
